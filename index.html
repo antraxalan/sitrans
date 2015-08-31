@@ -18,97 +18,102 @@
      KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
--->
-<html>
-<head>
+  -->
+  <html>
+  <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/theme-classic.css"/> -->
+    <!-- <link type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" />   -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
     <title>SITRANS</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
 
-        <div data-role="page" id="home" >
-            <header data-role="header">
-                <h1>CBN</h1>
-            </header> 
+      <div data-role="page" id="home" >
+        <header data-role="header" data-position="fixed">
+          <h1>CBN</h1>
+        </header> 
 
-            <div data-role="content">
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="#home" class="ui-btn-active">Home </a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <h3>BIENVENIDO A SITRANS APP</h3>
-                <img class="banner" src="img/logo.png">
-                this is the content
-                <a href="#contact" class="ui-shadow ui-btn ui-corner-all">Contactanos</a>
-            </div>
-            <footer data-role="footer">
-                <h3>Copyright &copy; 2015</h3>
-            </footer>
-        </div>
+        <div data-role="content">
+          <h3></h3>
 
 
-        <div data-role="page" id="about">
-            <header data-role="header">
-                <h1>ABOUT</h1>
-            </header> 
-
-            <div data-role="content">
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="#home" >Home </a></li>
-                        <li><a href="#about" class="ui-btn-active">About</a></li>
-                        <li><a href="#contact" >Contact</a></li>
-                    </ul>
-                </nav>
-                this is the about content
-            </div>
-            <footer data-role="footer">
-                <h3>Copyright &copy; 2015</h3>
-            </footer>
-        </div>
 
 
-        <div data-role="page" id="contact">
-            <header data-role="header">
-                <h1>CONTACT</h1>
-            </header> 
+          <div class="ui-content" role="main">
 
-            <div data-role="content">
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="#home" >Home </a></li>
-                        <li><a href="#about" >About</a></li>
-                        <li><a href="#contact" class="ui-btn-active">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="map">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.4523358535844!2d-68.14294433774853!3d-16.489658756884424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edff57f147269%3A0xd2de8a52fb810f22!2sCBN!5e0!3m2!1ses!2sbo!4v1438353911523" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-                this is the contact content
-            </div>
-            <footer data-role="footer">
-                <h3>Copyright &copy; 2015</h3>
-            </footer>
-        </div>
+            <form class="ui">
+
+            
+                <img src="img/logo_s.jpg" alt="image" style="width:100%; margin-top: 10px; margin-bottom: 10px; ">
+                         
 
 
+              <div class="ui-grid-solo" >
+                <div class="ui-block-a"><button type="button" class="big_button registrar"> Registrar</button></div>
+              </div>
+              <div class="ui-grid-a" >
+                <div class="ui-block-a"><button type="button" class="big_button">Cargar Datos</button></div>
+                <div class="ui-block-b"><button type="button" class="big_button">Finalizar</button></div>     
+              </div>
+            </form>
+          </div>
+
+
+        </div><!-- /content -->
+        <footer data-role="footer" data-position="fixed">
+          <h3>Copyright &copy; 2015</h3>
+        </footer>
+      </div><!-- /Page Home -->
+      
     </div>
+
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.mobile.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    
+    <script type="text/javascript" charset="utf-8">
 
-</body>
-</html>
+    // Wait for device API libraries to load
+    //
+    $('.registrar').click(function() {
+      // alert('Button has been clicked');
+      window.location.href = "detalles.html";
+    });
+    function onLoad() {
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        
+      }
+
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+        // alert("Back");
+      }
+
+    </script>
+  </body>
+  </html>
