@@ -57,21 +57,15 @@
 
             <form class="ui">
 
-            
-                <img src="img/logo_s.jpg" alt="image" style="width:100%; margin-top: 10px; margin-bottom: 10px; ">
-                         
+
+              <img src="img/logo_s.jpg" alt="image" style="width:100%; margin-top: 10px; margin-bottom: 10px; ">
+
 
 
               <div class="ui-grid-solo" >
-                <div class="ui-block-a"><button type="button" class="big_button registrar"> Registrar</button></div>
+                <div class="ui-block-a"><button type="button" class="big_button back">VOLVER</button></div>
               </div>
-              <div class="ui-grid-a" >
-                <div class="ui-block-a"><button type="button" class="big_button">Cargar Datos</button></div>
-                <div class="ui-block-b"><button type="button" class="big_button">Finalizar</button></div>     
-              </div>
-              <div class="ui-grid-solo" >
-                <div class="ui-block-a"><button type="button" class="big_button info">Informacion General</button></div>
-              </div>
+
             </form>
           </div>
 
@@ -94,14 +88,10 @@
 
     // Wait for device API libraries to load
     //
-    $('.registrar').click(function() {
-      // alert('Button has been clicked');
-      window.location.href = "detalles.html";
+    $('.back').click(function() {
+      window.location.href = "index.html";
     });
-    $('.info').click(function() {
-      // alert('Button has been clicked');
-      window.location.href = "pruebas.html";
-    });
+
     function onLoad() {
       document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -111,16 +101,29 @@
     //
     function onDeviceReady() {
         // Register the event listener
+        alert("Device Ready");
         document.addEventListener("backbutton", onBackKeyDown, false);
-        
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+        document.addEventListener("searchbutton", onSearchKeyDown, false);
       }
 
     // Handle the back button
     //
     function onBackKeyDown() {
-        // alert("Back");
+        alert("Back");
       }
 
-    </script>
-  </body>
-  </html>
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+      alert("Menu");
+    }
+
+    function onSearchKeyDown() {
+      alert("search");
+    }
+
+
+  </script>
+</body>
+</html>
