@@ -3,6 +3,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
     console.log('Device Ready');
+     alert("Device Ready2");
 }
 
 ( function( $ ) {
