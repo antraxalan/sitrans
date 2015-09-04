@@ -20,8 +20,14 @@
 .ui-selectmenu.ui-dialog .ui-header {
     border-bottom-width: 1px;
 }
+
+
 .big_button {
-	height: 100px; 
-	font-size: 25px !important;
-	vertical-align: text-bottom; 
+    height: 100px; 
+    font-size: 25px !important;
+    vertical-align: text-bottom; 
+}
+.price {
+    /*color: #3388CC;*/
+    color: #63A01B;
 }

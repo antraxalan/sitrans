@@ -27,13 +27,15 @@
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/theme-classic.css"/> -->
     <!-- <link type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" />   -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+
+
+    <script src="js/jquery.js"></script>
+
 
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
     <title>SITRANS</title>
@@ -331,159 +333,195 @@
 
             <div class="ui-content" role="main">
 
-            <form class="ui">
+              <form class="ui">
 
-              <div data-role="fieldcontain" class="ui-field-contain"data-demo-html="true">               
+                <div data-role="fieldcontain" class="ui-field-contain">
+                  <label for="select-custom-20">Producto:</label>
+                  <select name="select-custom-20" id="producto" data-native-menu="false" class="filterable-select">
 
-                <label for="date">Fecha:</label>
-                <input name="mydate" id="fecha" disabled="disabled"/>
-              </div>                
-              <div data-role="fieldcontain" class="ui-field-contain">
-              <label for="select-custom-20">Producto:</label>
-                <select name="select-custom-20" id="cliente" data-native-menu="false" class="filterable-select">
-
-                  <option value="-">Seleccione un producto.</option>
+                    <option value="-">Seleccione un producto.</option>
 
 
-                  <option value="25">25  DUCAL 620 H                             </option>
-                  <option value="26">26  DUCAL 620 H PROVINCIAS                  </option>
-                  <option value="27">27  DUCAL 250 bot ow                        </option>
-                  <option value="30">30  DUCAL DORADA 350 bot ow                 </option>
-                  <option value="40">40  DUCAL 350 lata                          </option>
-                  <option value="52">52  DUCAL 300 bot ow                        </option>
-                  <option value="60">60  DUCAL BARRIL 50 litros                  </option>
-                  <option value="61">61  DUCAL EXPORTACION 355 CC X24            </option>
-                  <option value="62">62  BRAHMA EXPORTACION LATA 355CC X24       </option>
-                  <option value="110">110 TAQUIÑA EXPORT 1000CC.                  </option>
-                  <option value="120">120 TAQUIÑA EXPORT 620.                     </option>
-                  <option value="125">125 TAQUINA EXPORT 620 H                    </option>
-                  <option value="126">126 TAQUINA HISTORICA 620 CC. SIX PACK      </option>
-                  <option value="127">127 GIFT PACK TAQUINA HISTORICA 620 CC.     </option>
-                  <option value="128">128 TAQUIÑA 115 AÑOS 620CC X 6              </option>
-                  <option value="130">130 TAQUINA EXPORT 350 bot ow               </option>
-                  <option value="132">132 TAQUINA EXPORT 250 bot ow               </option>
-                  <option value="133">133 TAQUINA EXPORT AZUL 250 bot ow          </option>
-                  <option value="134">134 TAQUINA EXPORT 250 bot ow EXPORTACION   </option>
-                  <option value="135">135 TAQUINA EXPORT 350 bot ow EXPORTACION   </option>
-                  <option value="139">139 TAQUIÑA LT 473CC X24                    </option>
-                  <option value="140">140 TAQUINA EXPORT 350 lata                 </option>
-                  <option value="143">143 TAQUINA EXPORT 350 lata CC. x 1         </option>
-                  <option value="144">144 TAQUINA EXPORT 350 lata EXPORTACION     </option>
-                  <option value="146">146 TAQUINA ALUMINIO 330 bot ow             </option>
-                  <option value="147">147 TAQUINA SLEEVES 250 bot ow              </option>
-                  <option value="152">152 TAQUINA EXPORT 300 bot ow               </option>
-                  <option value="160">160 TAQUINA BARRIL 50 litros                </option>
-                  <option value="163">163 VASO CHOPP TAQUINA EXPORT 500 CC.       </option>
-                  <option value="165">165 BARRIL IMPERIAL 50 litros               </option>
-                  <option value="170">170 IMPERIAL 620CC.                         </option>
-                  <option value="175">175 IMPERIAL 1000                           </option>
-                  <option value="177">177 IMPERIAL 1100                           </option>
-                  <option value="190">190 IMPERIAL LATA 350 CC.                   </option>
-                  <option value="191">191 IMPERIAL EXPORTACION LATA 355CC x24     </option>
-                  <option value="195">195 IMPERIAL 330 lata                       </option>
-                  <option value="196">196 TAQUINA ICE 300 CC.                     </option>
-                  <option value="197">197 TAQUINA ICE 300 CC. X 2 SIX PACK        </option>
-                  <option value="198">198 TAQUINA ICE 300 CC. SIX PACK            </option>
-                  <option value="199">199 TAQUINA ICE 300 CC. X 24                </option>
-                  <option value="201">201 TAQUINA ICE 300. X 4 SIX PACK           </option>
-                  <option value="203">203 TAQUIÑA ICE 300 CC X 1                  </option>
-                  <option value="204">204 ICE PACK TAQUIÑA 350 CC. X 12           </option>
-                  <option value="205">205 BOTELLA TAQUINA PILSENER VERDE          </option>
-                  <option value="260">260 QUILMES CRISTAL 330 CC                  </option>
-                  <option value="265">265 ANDES 354 lata                          </option>
-                  <option value="266">266 STELLA ARTOIS 335 CC.                   </option>
-                  <option value="267">267 STELLA ARTOISSP                         </option>
-                  <option value="268">268 GIFT PACK STELLA ARTOIS 355 CC.         </option>
-                  <option value="269">269 STELLA ARTOIS XMAS PACK 750CC X6        </option>
-                  <option value="270">270 BAVIERA 330 bot                         </option>
-                  <option value="280">280 BALTICA 350 lata EXPORTACION            </option>
-                  <option value="285">285 BALTICA LATA 350 cc                     </option>
-                  <option value="286">286 BALTICA F LATA 350 CC.                  </option>
-                  <option value="287">287 BALTICA EXPORT PERU LATA 355CC x24      </option>
-                  <option value="290">290 TAQUINA AMBER LAGER 300 CC.             </option>
-                  <option value="291">291 TAQUINA AMBER LAGER 620 CC              </option>
-                  <option value="293">293 TAQUINA AMBER LAGER 300 CC. X 4 SIX PACK</option>
-                  <option value="363">363 TAQUINA STOUT NEGRA 620                 </option>
-                  <option value="365">365 TAQUINA STOUT NEGRA 300 bot ow          </option>
-                  <option value="367">367 TAQUIÑA STOUT NEGRA 300 CC X 1          </option>
-                  <option value="370">370 MALTIN 620                              </option>
-                  <option value="375">375 MALTIN 330 LATA                         </option>
-                  <option value="376">376 MALTIN SABORIZ                          </option>
-                  <option value="378">378 MALTIN 330 CC. SABOR ORIGINAL           </option>
-                  <option value="380">380 MALTIN 350 BOT OW                       </option>
-                  <option value="381">381 PONY MALT 350 bot ow                    </option>
-                  <option value="390">390 TAQUINA EXPORT 350 bot ret              </option>
-                  <option value="420">420 MALTIN 620                              </option>
-                  <option value="430">430 MALTIN 350 bot ow                       </option>
-                  <option value="500">500 PILSENER PACEÑA 620 CC.                 </option>
-                  <option value="501">501 PILSENER 620CC (T.M.)                   </option>
-                  <option value="502">502 PILSENER 620                            </option>
-                  <option value="503">503 VASO 500 CC. DE PILSENER 620            </option>
-                  <option value="504">504 VASO CHOPP PACENA 330 CC.               </option>
-                  <option value="505">505 HUARI 620 CC.                           </option>
-                  <option value="506">506 HUARI 330 BOT OW                        </option>
-                  <option value="507">507 HUARI 4 SIX PACKS 330 bot ow            </option>
-                  <option value="508">508 GIFT PACK HUARI 330 CC.                 </option>
-                  <option value="509">509 SIX PACK HUARI 330CC. CARNAVAL          </option>
-                  <option value="510">510 PILSENER T.O. 300 CC.                   </option>
-                  <option value="511">511 PILSENER TWIST OFF 300 O.W. PROMOCION   </option>
-                  <option value="512">512 PACENA PILSENER 330 bot ow              </option>
-                  <option value="513">513 PACENA SLEEVES 350 bot ow               </option>
-                  <option value="514">514 PACENA SLEEVES C/CJS.MAD.350 CC.        </option>
-                  <option value="515">515 TROPICAL EXTRA 620                      </option>
-                  <option value="516">516 LT CRUCEÑA 350cc x 24                   </option>
-                  <option value="517">517 PILSENER TO 300CC TERMOSENSIBLE         </option>
-                  <option value="530">530 CENTENARIO LATA 355CC.                  </option>
-                  <option value="531">531 CENTENARIO 355 lata  EXPORT.            </option>
-                  <option value="532">532 CENTENARIO 355 lata EXPORTACION CAJA    </option>
-                  <option value="533">533 CENTENARIO 355 lata CC. X 1             </option>
-                  <option value="534">534 CENTENARIO 355 lata UNIDAD              </option>
-                  <option value="535">535 PACENA COOL2GO 473 CC.                  </option>
-                  <option value="536">536 CENTENARIO 355 LATA ND                  </option>
-                  <option value="537">537 ICE PACK PACEÑA                         </option>
-                  <option value="539">539 LT PACEÑA 473 24                        </option>
-                  <option value="540">540 CENTENARIO 355 bot ow                   </option>
-                  <option value="543">543 CENTENARIO 350 BOT OW                   </option>
-                  <option value="544">544 CENTENARIO 350 bot ow EXPORT.           </option>
-                  <option value="545">545 BICERVECINA 620                         </option>
-                  <option value="547">547 CENTENARIO OW EMBAND EXP 350 CC         </option>
-                  <option value="548">548 PACEÑA SIX PACK x4 PICO ORO             </option>
-                  <option value="550">550 BICERVECINA 310 bot ow                  </option>
-                  <option value="551">551 BICERVECINA EL INCA 350CC.              </option>
-                  <option value="552">552 LATA PACEÑA 350CC PARLANTE X24          </option>
-                  <option value="553">553 PACEÑA LATA TERMOSENSIBLE 355 X24       </option>
-                  <option value="554">554 PACEÑA LATA CARNAVAL 2012 355CCX24      </option>
-                  <option value="564">564 BOCK LATA 350CC 4X6                     </option>
-                  <option value="565">565 BICERVECINA 355 bot ow                  </option>
-                  <option value="566">566 BICERVECINA 355 bot ow EXPORT           </option>
-                  <option value="567">567 BICERVECINA 355 bot ow EXPORT SIX PACK  </option>
-                  <option value="568">568 BICERVECINA O.W. 330 CC.                </option>
-                  <option value="569">569 BICERVECINA INCA 330 (12) bot ow        </option>
-                  <option value="570">570 BICERVECINA 355 bot ow  HUARI 355 CC.   </option>
-                  <option value="571">571 BOTELLA CONTOUR CLIP BLUE NIGHT 300 CC. </option>
-                  <option value="572">572 BOCK 300 bot ow                         </option>
-                  <option value="573">573 BOCK 350 LATA                           </option>
-                  <option value="574">574 LATA BOCK BLUE NIGHT 350 CC.            </option>
-                  <option value="576">576 BOCK 330 bot ow                         </option>
-                  <option value="577">577 BOCK 620                                </option>
-                  <option value="578">578 BOCK 300 CONTOUR                        </option>
-                  <option value="579">579 BOTELLA CONTOUR BLUE NIGHT 300 CC.      </option>
-                  <option value="580">580 MILENIO 355                             </option>
-                  <option value="581">581 PACEÑA PORTER 300 CC.                   </option>
-                  <option value="582">582 PACENA PORTER x 4 SIX PACK 300 CC.      </option>
-                  <option value="583">583 PACENA PORTER 620 CC.                   </option>
-                  <option value="587">587 PACENA RED LAGER 300 CC. SIX PACK       </option>
-                  <option value="588">588 BOCK CONTOUR NUEVO COLLARIN 300 CC.     </option>
-                  <option value="590">590 PILSENER BARRIL 30 litros               </option>
-                  <option value="595">595 PILSENER BARRIL 50 litros               </option>
-                  <option value="596">596 TROP. EXTRA BARRIL 50 litros EXP. LPZ   </option>
-                  <option value="597">597 BARRIL BOCK 50 LTR.                     </option>
-
-                  
+                    <option value="25">25  DUCAL 620 H                             </option>
+                    <option value="26">26  DUCAL 620 H PROVINCIAS                  </option>
+                    <option value="27">27  DUCAL 250 bot ow                        </option>
+                    <option value="30">30  DUCAL DORADA 350 bot ow                 </option>
+                    <option value="40">40  DUCAL 350 lata                          </option>
+                    <option value="52">52  DUCAL 300 bot ow                        </option>
+                    <option value="60">60  DUCAL BARRIL 50 litros                  </option>
+                    <option value="61">61  DUCAL EXPORTACION 355 CC X24            </option>
+                    <option value="62">62  BRAHMA EXPORTACION LATA 355CC X24       </option>
+                    <option value="110">110 TAQUIÑA EXPORT 1000CC.                  </option>
+                    <option value="120">120 TAQUIÑA EXPORT 620.                     </option>
+                    <option value="125">125 TAQUINA EXPORT 620 H                    </option>
+                    <option value="126">126 TAQUINA HISTORICA 620 CC. SIX PACK      </option>
+                    <option value="127">127 GIFT PACK TAQUINA HISTORICA 620 CC.     </option>
+                    <option value="128">128 TAQUIÑA 115 AÑOS 620CC X 6              </option>
+                    <option value="130">130 TAQUINA EXPORT 350 bot ow               </option>
+                    <option value="132">132 TAQUINA EXPORT 250 bot ow               </option>
+                    <option value="133">133 TAQUINA EXPORT AZUL 250 bot ow          </option>
+                    <option value="134">134 TAQUINA EXPORT 250 bot ow EXPORTACION   </option>
+                    <option value="135">135 TAQUINA EXPORT 350 bot ow EXPORTACION   </option>
+                    <option value="139">139 TAQUIÑA LT 473CC X24                    </option>
+                    <option value="140">140 TAQUINA EXPORT 350 lata                 </option>
+                    <option value="143">143 TAQUINA EXPORT 350 lata CC. x 1         </option>
+                    <option value="144">144 TAQUINA EXPORT 350 lata EXPORTACION     </option>
+                    <option value="146">146 TAQUINA ALUMINIO 330 bot ow             </option>
+                    <option value="147">147 TAQUINA SLEEVES 250 bot ow              </option>
+                    <option value="152">152 TAQUINA EXPORT 300 bot ow               </option>
+                    <option value="160">160 TAQUINA BARRIL 50 litros                </option>
+                    <option value="163">163 VASO CHOPP TAQUINA EXPORT 500 CC.       </option>
+                    <option value="165">165 BARRIL IMPERIAL 50 litros               </option>
+                    <option value="170">170 IMPERIAL 620CC.                         </option>
+                    <option value="175">175 IMPERIAL 1000                           </option>
+                    <option value="177">177 IMPERIAL 1100                           </option>
+                    <option value="190">190 IMPERIAL LATA 350 CC.                   </option>
+                    <option value="191">191 IMPERIAL EXPORTACION LATA 355CC x24     </option>
+                    <option value="195">195 IMPERIAL 330 lata                       </option>
+                    <option value="196">196 TAQUINA ICE 300 CC.                     </option>
+                    <option value="197">197 TAQUINA ICE 300 CC. X 2 SIX PACK        </option>
+                    <option value="198">198 TAQUINA ICE 300 CC. SIX PACK            </option>
+                    <option value="199">199 TAQUINA ICE 300 CC. X 24                </option>
+                    <option value="201">201 TAQUINA ICE 300. X 4 SIX PACK           </option>
+                    <option value="203">203 TAQUIÑA ICE 300 CC X 1                  </option>
+                    <option value="204">204 ICE PACK TAQUIÑA 350 CC. X 12           </option>
+                    <option value="205">205 BOTELLA TAQUINA PILSENER VERDE          </option>
+                    <option value="260">260 QUILMES CRISTAL 330 CC                  </option>
+                    <option value="265">265 ANDES 354 lata                          </option>
+                    <option value="266">266 STELLA ARTOIS 335 CC.                   </option>
+                    <option value="267">267 STELLA ARTOISSP                         </option>
+                    <option value="268">268 GIFT PACK STELLA ARTOIS 355 CC.         </option>
+                    <option value="269">269 STELLA ARTOIS XMAS PACK 750CC X6        </option>
+                    <option value="270">270 BAVIERA 330 bot                         </option>
+                    <option value="280">280 BALTICA 350 lata EXPORTACION            </option>
+                    <option value="285">285 BALTICA LATA 350 cc                     </option>
+                    <option value="286">286 BALTICA F LATA 350 CC.                  </option>
+                    <option value="287">287 BALTICA EXPORT PERU LATA 355CC x24      </option>
+                    <option value="290">290 TAQUINA AMBER LAGER 300 CC.             </option>
+                    <option value="291">291 TAQUINA AMBER LAGER 620 CC              </option>
+                    <option value="293">293 TAQUINA AMBER LAGER 300 CC. X 4 SIX PACK</option>
+                    <option value="363">363 TAQUINA STOUT NEGRA 620                 </option>
+                    <option value="365">365 TAQUINA STOUT NEGRA 300 bot ow          </option>
+                    <option value="367">367 TAQUIÑA STOUT NEGRA 300 CC X 1          </option>
+                    <option value="370">370 MALTIN 620                              </option>
+                    <option value="375">375 MALTIN 330 LATA                         </option>
+                    <option value="376">376 MALTIN SABORIZ                          </option>
+                    <option value="378">378 MALTIN 330 CC. SABOR ORIGINAL           </option>
+                    <option value="380">380 MALTIN 350 BOT OW                       </option>
+                    <option value="381">381 PONY MALT 350 bot ow                    </option>
+                    <option value="390">390 TAQUINA EXPORT 350 bot ret              </option>
+                    <option value="420">420 MALTIN 620                              </option>
+                    <option value="430">430 MALTIN 350 bot ow                       </option>
+                    <option value="500">500 PILSENER PACEÑA 620 CC.                 </option>
+                    <option value="501">501 PILSENER 620CC (T.M.)                   </option>
+                    <option value="502">502 PILSENER 620                            </option>
+                    <option value="503">503 VASO 500 CC. DE PILSENER 620            </option>
+                    <option value="504">504 VASO CHOPP PACENA 330 CC.               </option>
+                    <option value="505">505 HUARI 620 CC.                           </option>
+                    <option value="506">506 HUARI 330 BOT OW                        </option>
+                    <option value="507">507 HUARI 4 SIX PACKS 330 bot ow            </option>
+                    <option value="508">508 GIFT PACK HUARI 330 CC.                 </option>
+                    <option value="509">509 SIX PACK HUARI 330CC. CARNAVAL          </option>
+                    <option value="510">510 PILSENER T.O. 300 CC.                   </option>
+                    <option value="511">511 PILSENER TWIST OFF 300 O.W. PROMOCION   </option>
+                    <option value="512">512 PACENA PILSENER 330 bot ow              </option>
+                    <option value="513">513 PACENA SLEEVES 350 bot ow               </option>
+                    <option value="514">514 PACENA SLEEVES C/CJS.MAD.350 CC.        </option>
+                    <option value="515">515 TROPICAL EXTRA 620                      </option>
+                    <option value="516">516 LT CRUCEÑA 350cc x 24                   </option>
+                    <option value="517">517 PILSENER TO 300CC TERMOSENSIBLE         </option>
+                    <option value="530">530 CENTENARIO LATA 355CC.                  </option>
+                    <option value="531">531 CENTENARIO 355 lata  EXPORT.            </option>
+                    <option value="532">532 CENTENARIO 355 lata EXPORTACION CAJA    </option>
+                    <option value="533">533 CENTENARIO 355 lata CC. X 1             </option>
+                    <option value="534">534 CENTENARIO 355 lata UNIDAD              </option>
+                    <option value="535">535 PACENA COOL2GO 473 CC.                  </option>
+                    <option value="536">536 CENTENARIO 355 LATA ND                  </option>
+                    <option value="537">537 ICE PACK PACEÑA                         </option>
+                    <option value="539">539 LT PACEÑA 473 24                        </option>
+                    <option value="540">540 CENTENARIO 355 bot ow                   </option>
+                    <option value="543">543 CENTENARIO 350 BOT OW                   </option>
+                    <option value="544">544 CENTENARIO 350 bot ow EXPORT.           </option>
+                    <option value="545">545 BICERVECINA 620                         </option>
+                    <option value="547">547 CENTENARIO OW EMBAND EXP 350 CC         </option>
+                    <option value="548">548 PACEÑA SIX PACK x4 PICO ORO             </option>
+                    <option value="550">550 BICERVECINA 310 bot ow                  </option>
+                    <option value="551">551 BICERVECINA EL INCA 350CC.              </option>
+                    <option value="552">552 LATA PACEÑA 350CC PARLANTE X24          </option>
+                    <option value="553">553 PACEÑA LATA TERMOSENSIBLE 355 X24       </option>
+                    <option value="554">554 PACEÑA LATA CARNAVAL 2012 355CCX24      </option>
+                    <option value="564">564 BOCK LATA 350CC 4X6                     </option>
+                    <option value="565">565 BICERVECINA 355 bot ow                  </option>
+                    <option value="566">566 BICERVECINA 355 bot ow EXPORT           </option>
+                    <option value="567">567 BICERVECINA 355 bot ow EXPORT SIX PACK  </option>
+                    <option value="568">568 BICERVECINA O.W. 330 CC.                </option>
+                    <option value="569">569 BICERVECINA INCA 330 (12) bot ow        </option>
+                    <option value="570">570 BICERVECINA 355 bot ow  HUARI 355 CC.   </option>
+                    <option value="571">571 BOTELLA CONTOUR CLIP BLUE NIGHT 300 CC. </option>
+                    <option value="572">572 BOCK 300 bot ow                         </option>
+                    <option value="573">573 BOCK 350 LATA                           </option>
+                    <option value="574">574 LATA BOCK BLUE NIGHT 350 CC.            </option>
+                    <option value="576">576 BOCK 330 bot ow                         </option>
+                    <option value="577">577 BOCK 620                                </option>
+                    <option value="578">578 BOCK 300 CONTOUR                        </option>
+                    <option value="579">579 BOTELLA CONTOUR BLUE NIGHT 300 CC.      </option>
+                    <option value="580">580 MILENIO 355                             </option>
+                    <option value="581">581 PACEÑA PORTER 300 CC.                   </option>
+                    <option value="582">582 PACENA PORTER x 4 SIX PACK 300 CC.      </option>
+                    <option value="583">583 PACENA PORTER 620 CC.                   </option>
+                    <option value="587">587 PACENA RED LAGER 300 CC. SIX PACK       </option>
+                    <option value="588">588 BOCK CONTOUR NUEVO COLLARIN 300 CC.     </option>
+                    <option value="590">590 PILSENER BARRIL 30 litros               </option>
+                    <option value="595">595 PILSENER BARRIL 50 litros               </option>
+                    <option value="596">596 TROP. EXTRA BARRIL 50 litros EXP. LPZ   </option>
+                    <option value="597">597 BARRIL BOCK 50 LTR.                     </option>
 
 
-                </select>
-              </div>
+
+
+                  </select>
+                </div>
+                <div data-role="fieldcontain" class="ui-field-contain ui-bar ui-bar-a ui-corner-all">
+                  Existencias:
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                      <div class="ui-field-contain">
+                        <label for="textarea">Cajas:</label>
+                        <input name="precio" id="cajas_e" disabled="disabled" value="35" />
+                      </div>
+                    </div>
+                    <div class="ui-block-b">
+                      <div class="ui-field-contain">
+                        <label for="textarea">Unidades:</label>
+                        <input name="precio" id="unidades_e" disabled="disabled" value="312" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-role="fieldcontain" class="ui-field-contain ui-body ui-bar-a ui-corner-all">
+                  Pedido:
+                  <div class="ui-field-contain">
+                  <label for="textarea">Precio por Caja:</label>
+                    <input name="precio" id="cajas_e"  value="" />
+                  </div>
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                      <div class="ui-field-contain">
+                        <label for="textarea">Cajas:</label>
+                        <input name="precio" id="cajas_e"  value="" />
+                      </div>
+                    </div>
+                    <div class="ui-block-b">
+                      <div class="ui-field-contain">
+                        <label for="textarea">Unidades:</label>
+                        <input name="precio" id="unidades_e" value="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               <!-- <div data-role="fieldcontain" class="ui-field-contain">
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <legend>Tipo:</legend>
@@ -497,12 +535,9 @@
                 <label for="date">Fecha Vto:</label>
                 <input name="mydate" id="fecha2" type="date" data-role="datebox" data-options='{"mode": "datebox", "useNewStyle":true}'/>
               </div>     -->
-              <div data-role="fieldcontain" class="ui-field-contain">
-                <label for="textarea">Obs:</label>
-                <textarea cols="40" rows="8" name="textarea" id="obs"></textarea>
-              </div>
+              
               <div class="ui-field-contain">
-                <button type="button" class="guardar_venta">Guardar</button>
+                <button type="button" class="guardar_venta" data-icon="shop">Guardar</button>
               </div>
 
 
@@ -521,41 +556,61 @@
        <ul data-role="listview" data-split-icon="edit" data-inset="true">
         <li>
           <a href="#">
-          <!-- <img src="../_assets/img/album-bb.jpg"> -->
-          <h2>DUCAL 300 bot ow</h2>
-          <p>6 cajas</p>
+            <img src="img/cart.png">
+            <h2>DUCAL 300 bot ow</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
           </a>
           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
         </li>
         <li>
           <a href="#">
-          <!-- <img src="../_assets/img/album-hc.jpg"> -->
-          <h2>175 IMPERIAL 1000</h2>
-          <p>10 cajas</p>
+            <img src="img/cart.png">
+            <h2>175 IMPERIAL 1000</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
           </a>
           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
         </li>
         <li>
           <a href="#">
-          <!-- <img src="../_assets/img/album-bb.jpg"> -->
-          <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
-          <p>30 cajas</p>
+            <img src="img/cart.png">
+            <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
           </a>
           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
         </li>
         <li>
           <a href="#">
-          <img src="img/cart.png">
-          <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
-          <p>25 cajas</p>
+            <img src="img/cart.png">
+            <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
           </a>
           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
         </li>
         <li>
           <a href="#">
-          <img src="img/logo.png">
-          <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
-          <p>15 cajas</p>
+            <img src="img/cart.png">
+            <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
           </a>
           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
         </li>
