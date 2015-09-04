@@ -50,7 +50,7 @@
 
         <div data-role="content">
           <h3>BIENVENIDO A SITRANS APP</h3>
-
+<!-- 
 -----------------------
 <div data-role="fieldcontain">
            <label for="password">Password:</label>
@@ -117,7 +117,7 @@
            <input type="color" name="color" id="color" value="" />
       </div>
 -------------------
-
+ -->
 
           <div class="ui-content" role="main">
 
@@ -547,18 +547,18 @@
                   </select>
                 </div>
                 <div data-role="fieldcontain" class="ui-field-contain ui-bar ui-bar-a ui-corner-all">
-                  Existencias:
+                  Saldo:
                   <div class="ui-grid-a">
                     <div class="ui-block-a">
                       <div class="ui-field-contain">
                         <label for="textarea">Cajas:</label>
-                        <input name="precio" id="cajas_e" disabled="disabled" value="35" />
+                        <input type="number" name="precio" id="cajas_s" disabled="disabled" value="35" />
                       </div>
                     </div>
                     <div class="ui-block-b">
                       <div class="ui-field-contain">
                         <label for="textarea">Unidades:</label>
-                        <input name="precio" id="unidades_e" disabled="disabled" value="312" />
+                        <input type="number" name="precio" id="unidades_s" disabled="disabled" value="312" />
                       </div>
                     </div>
                   </div>
@@ -568,19 +568,19 @@
                   Pedido:
                   <div class="ui-field-contain">
                   <label for="textarea">Precio por Caja:</label>
-                    <input name="precio" id="cajas_e"  value="" />
+                    <input type="number" name="precio" id="precio_p"  value="" data-clear-btn="true"/>
                   </div>
                   <div class="ui-grid-a">
                     <div class="ui-block-a">
                       <div class="ui-field-contain">
                         <label for="textarea">Cajas:</label>
-                        <input name="precio" id="cajas_e"  value="" />
+                        <input type="number" name="precio" id="cajas_p"  value="" data-clear-btn="true"/>
                       </div>
                     </div>
                     <div class="ui-block-b">
                       <div class="ui-field-contain">
                         <label for="textarea">Unidades:</label>
-                        <input name="precio" id="unidades_e" value="" />
+                        <input type="number" name="precio" id="unidades_p" value="" data-clear-btn="true"/>
                       </div>
                     </div>
                   </div>

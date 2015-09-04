@@ -63,11 +63,11 @@
 
 
               <div class="ui-grid-solo" >
-                <div class="ui-block-a"><button type="button" class="big_button registrar"> Registrar</button></div>
+                <div class="ui-block-a"><button type="button" class="big_button registrar">Datos Cliente</button></div>
               </div>
               <div class="ui-grid-a" >
-                <div class="ui-block-a"><button type="button" class="big_button">Cargar Datos</button></div>
-                <div class="ui-block-b"><button type="button" class="big_button">Finalizar</button></div>     
+                <div class="ui-block-a"><button type="button" class="big_button cargar">Cargar Datos del Camion</button></div>
+                <div class="ui-block-b"><button type="button" class="big_button finalizar">Finalizar</button></div>     
               </div>
               <div class="ui-grid-solo" >
                 <div class="ui-block-a"><button type="button" class="big_button info">Informacion General</button></div>
@@ -101,6 +101,16 @@
     $('.info').click(function() {
       // alert('Button has been clicked');
       window.location.href = "pruebas.html";
+    });
+    $('.cargar').click(function() {
+      // alert('Button has been clicked');
+      // window.location.href = "pruebas.html";
+      $.mobile.loading('show');
+    });
+    $('.cargar').click(function() {
+      // alert('Button has been clicked');
+      // window.location.href = "pruebas.html";
+      $.mobile.loading('hide');
     });
     function onLoad() {
       document.addEventListener("deviceready", onDeviceReady, false);
