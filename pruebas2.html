@@ -59,14 +59,14 @@
         // Transaction success callback
         //
         function successCB() {
-            var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
+            var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
             db.transaction(queryDB, errorCB);
         }
 
          // Cordova is ready
         //
         function onDeviceReady() {
-            var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
+            var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
@@ -78,19 +78,19 @@
         }
 
         function goInsert() {
-            var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
-            var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
+            var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
+            // var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
             db.transaction(insertDB, errorCB, successCB);
 
         }
 
         function goSearch() {
-            var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
+            var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
             db.transaction(searchQueryDB, errorCB);
         }
 
         function goDelete() {
-           var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
+           var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
            db.transaction(deleteRow, errorCB);
            document.getElementById('qrpopup').style.display='none';
        }
@@ -110,7 +110,7 @@
                 + currentRow, [], queryDB, errorCB);
         }
         function goEdit() {
-            var db = window.openDatabase("sitrans_db", "1.0", "Sitrans DB", 500000);
+            var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
             db.transaction(editRow, errorCB);
             document.getElementById('qrpopup').style.display='none';
         }
