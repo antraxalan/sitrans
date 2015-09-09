@@ -73,8 +73,10 @@
         //Insert query
         //
         function insertDB(tx) {
-            tx.executeSql('INSERT INTO DEMO (name,number) VALUES ("' +document.getElementById("txtName").value
-                +'","'+document.getElementById("txtNumber").value+'")');
+            for (var i = 0; i < 1000; i++) {
+                
+            tx.executeSql('INSERT INTO DEMO (name,number) VALUES ("' +document.getElementById("txtName").value+'","'+document.getElementById("txtNumber").value+'")');
+            };
         }
 
         function goInsert() {
