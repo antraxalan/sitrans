@@ -18,7 +18,8 @@ function init() {
 }
 
 function fail(e) {
-	alert('error'+e);
+	alert('error: '+ e.description);
+	alert('num: '+ e.number);
 	console.log("FileSystem Error");
 	console.dir(e);
 }
