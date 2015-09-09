@@ -8,7 +8,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
 
-        
+
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -73,10 +73,7 @@
         //Insert query
         //
         function insertDB(tx) {
-            for (var i = 0; i < 1000; i++) {
-                
             tx.executeSql('INSERT INTO DEMO (name,number) VALUES ("' +document.getElementById("txtName").value+'","'+document.getElementById("txtNumber").value+'")');
-            };
         }
 
         function goInsert() {
@@ -92,10 +89,10 @@
         }
 
         function goDelete() {
-           var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
-           db.transaction(deleteRow, errorCB);
-           document.getElementById('qrpopup').style.display='none';
-       }
+         var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
+         db.transaction(deleteRow, errorCB);
+         document.getElementById('qrpopup').style.display='none';
+     }
 
         //Show the popup after tapping a row in table
         //
@@ -121,26 +118,27 @@
     </script>
 </head>
 <body>
-   <h1>My first App</h1>
-    <p>Open Database</p>
-    <div id="qrpopup" > //The hidden div tag for implementing the popup
-            <hr/>
-            <input type="text" id="editNameBox"><br>
-            <input type="text" id="editNumberBox"><br>
-            <button onclick="goDelete()">Delete</button>
-            <button onclick="goEdit()">Edit</button>
-            <button onclick="document.getElementById('qrpopup').style.display='none';">Discard</button>
-    </div>
+ <h1>My first App</h1>
+ <p>Open Database</p>
+ <div id="qrpopup" > //The hidden div tag for implementing the popup
+    <hr/>
+    <input type="text" id="editNameBox"><br>
+    <input type="text" id="editNumberBox"><br>
+    <button onclick="goDelete()">Delete</button>
+    <button onclick="goEdit()">Edit</button>
+    <button onclick="document.getElementById('qrpopup').style.display='none';">Discard</button>
+</div>
 
-    <div>
-        Name<input type="text" value="Name" id="txtName">
-        Number<input type="text" value="123" id="txtNumber"><hr/>
-    </div>
-    <div id="tblDiv"></div>
-    <div style="text-align: center">
-        <button onclick="goInsert()">Insert</button>
-        <button onclick="goSearch()">Search</button>
-        <button onclick="successCB()">Show All</button>
-    </div>
+<div>
+    Name<input type="text" value="Name" id="txtName">
+    Number<input type="text" value="123" id="txtNumber"><hr/>
+</div>
+<div id="tblDiv"></div>
+<div style="text-align: center">
+    <button onclick="goInsert()">Insert</button>
+    <button onclick="goSearch()">Search</button>
+    <button onclick="successCB()">Show All</button>
+    <button onclick="clearTab()">Clear Table</button>
+</div>
 </body>
 </html>
