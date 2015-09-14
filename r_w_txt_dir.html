@@ -101,9 +101,21 @@ function gotFileWriter(writer) {
         reader.readAsText(file);
     }
 
+    function fail(error) {
+        console.log("error code = " + error.code);
+        alert("failed, error code = " + error.code);
+    }
+    function failDir(error) {
+        console.log("error code = " + error.code);
+        alert("failed dir, error code = " + error.code);
+    }
     function failRead(error) {
         console.log("error code = " + error.code);
         alert("read failed, error code = " + error.code);
+    }
+    function failDirRead(error) {
+        console.log("error code = " + error.code);
+        alert("read folder failed, error code = " + error.code);
     }
 
 </script>
