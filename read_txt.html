@@ -22,13 +22,13 @@
 
 
 function gotFS(fileSystem) {
-	fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDir,failDir);
 	alert("getDirectory");
+	fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDir,failDir);
 }
 
 function gotDir(dirEntry) {
-    dirEntry.getFile("sitranstxt.txt", {create: true, exclusive: false}, gotFileEntry,fail);
 	alert("getDirectory");
+    dirEntry.getFile("sitranstxt.txt", {create: true, exclusive: false}, gotFileEntry,fail);
 }
 
  
