@@ -22,16 +22,16 @@
 
 
 function gotFS(fileSystem) {
-	fileSystem.root.getDirectory("data_sitrans", {create: true}, gotDir);
+	fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDir,failDir);
 	alert("getDirectory");
 }
 
 function gotDir(dirEntry) {
-    dirEntry.getFile("sitranstxt.txt", null, gotFileEntry,fail);
+    dirEntry.getFile("sitranstxt.txt", {create: true, exclusive: false}, gotFileEntry,fail);
 	alert("getDirectory");
 }
 
-
+ 
     // function gotFS(fileSystem) {
     // 	fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
     // }
@@ -70,6 +70,10 @@ function gotDir(dirEntry) {
     }
 
     function fail(evt) {
+    	console.log(evt.target.error.code);
+    	alert(evt.target.error.code);
+    }
+    function failDir(evt) {
     	console.log(evt.target.error.code);
     	alert(evt.target.error.code);
     }
