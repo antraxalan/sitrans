@@ -45,6 +45,7 @@
         reader.onloadend = function(evt) {
             console.log("Read as text");
             console.log(evt.target.result);
+            document.querySelector("#textArea").innerHTML = this.result;
         };
         reader.readAsText(file);
     }
@@ -58,5 +59,6 @@
   <body>
     <h1>Example</h1>
     <p>Read File</p>
+    <textarea id="textArea"></textarea>
   </body>
 </html>
