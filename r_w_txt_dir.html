@@ -17,8 +17,8 @@ function gotFS(fileSystem) {
     
 }
 
-function gotDir(fileSystem) {
-    fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+function gotDir(dirEntry) {
+    dirEntry.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
@@ -64,8 +64,8 @@ function gotFileWriter(writer) {
     
     }
 
-    function gotDirRead(fileSystem) {
-        fileSystem.root.getFile("readme.txt", null, gotFileEntryRead, failRead);
+    function gotDirRead(dirEntry) {
+        dirEntry.getFile("readme.txt", null, gotFileEntryRead, failRead);
     }
 
     function gotFileEntryRead(fileEntry) {
