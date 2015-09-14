@@ -7,7 +7,7 @@ function init() {
 	}, fail);
 
 	//This alias is a read-only pointer to the app itself
-	window.resolveLocalFileSystemURL(cordova.file.applicationDirectory + "www/index.html", gotFile, fail);
+	window.resolveLocalFileSystemURL("data_sitrans/sitranstxt.txt", gotFile, fail);
 
 	/* Yes, this works too for our specific example...
 	$.get("index.html", function(res) {
