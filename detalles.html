@@ -37,9 +37,9 @@
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/loader.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/loader.js"></script> -->
 
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
     <title>SITRANS</title>
@@ -51,6 +51,7 @@
       <div data-role="page" id="home" class="ui-page-theme-a">
         <header data-role="header" data-position="fixed">
           <h1>CBN</h1>
+          <a href="index.html" data-icon="home" class="ui-btn-right">Inicio</a>
         </header> 
 
         <div data-role="content">
@@ -365,7 +366,7 @@
           <fieldset data-role="controlgroup" data-type="horizontal">
             <legend>Tipo:</legend>
             <label for="cont">Contado</label>
-            <input type="radio" name="tipo" id="cont" value="cont" checked>
+            <input type="radio" name="tipo" id="cont" value="cont" checked="checked">
             <label for="cred">Credito</label>
             <input type="radio" name="tipo" id="cred" value="cred">
           </fieldset>
@@ -383,7 +384,33 @@
           <a href="#venta" data-role="button">Detalles</a>
         </div>
 
-
+<ul data-role="listview" data-inset="true">
+        <li style="display: none-;">
+          <a href="#">
+            <!-- <img src="img/cart.png"> -->
+            <h2>Cobranza</h2>
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><p>6 cajas</p></div>
+              <div class="ui-block-b"><p>2 unidades</p></div>
+              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+            </div>
+          </a>
+          <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
+        </li>
+        <li style="display: none-;">
+          <a href="#">
+            <!-- <img src="img/cart.png"> -->
+            <h2>Envases</h2>
+            <p> El usuario <div id="show_cli"></div>  </p>
+           <!--  <div class="ui-grid-b">
+              <div class="ui-block-a"><p>  </p></div>
+              <div class="ui-block-b"><p>  </p></div>
+              <div class="ui-block-c price"><p><strong>  </strong></p></div>
+            </div> -->
+          </a>
+          <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
+        </li>
+      </ul>
 
       </form>
     </div>
@@ -809,42 +836,70 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script>
   jQuery(document).ready(function() {
+    // $(document).on("pagecreate","#home",function(){
+    // $(document).on("pagecreate",function(){
 
 
-    var d = new Date();
+      var d = new Date();
 
-    var month = d.getMonth()+1;
-    var day = d.getDate();
-    var output =((''+day).length<2 ? '0' : '') + day + '/' +
-    ((''+month).length<2 ? '0' : '') + month + '/' +    d.getFullYear() ;
+      var month = d.getMonth()+1;
+      var day = d.getDate();
+      var output =((''+day).length<2 ? '0' : '') + day + '/' +
+      ((''+month).length<2 ? '0' : '') + month + '/' +    d.getFullYear() ;
 
-    $("#fecha").val(output);
+      $("#fecha").val(output);
 
-    $(".articulo").hide();
-    $(".vencimiento").hide();
+      $(".articulo").hide();
+      $(".vencimiento").hide();
 
-    $('.show').click(function() {
-     $(".articulo").show(300);
-   });
+      $('.show').click(function() {
+       $(".articulo").show(300);
+     });
 
-    $('.guardar_venta').click(function() {
-     $(".articulo").hide(300);
-   });
+      $('.guardar_venta').click(function() {
+       $(".articulo").hide(300);
+     });
 
-    $('input[type=radio][name=tipo]').on('change', function(){
-      switch($(this).val()){
-        case 'cont' :
-        // alert("contado");
-        $(".vencimiento").hide(200);
-        break;
-        case 'cred' :
-        // alert("credito");
-        $(".vencimiento").show(200);
-        break;
-      }            
-    });​
+    // $('input[type=radio][name=tipo]').on('change', function(){
+    //   switch($(this).val()){
+    //     case 'cont' :
+    //     alert("contado");
+    //     $(".vencimiento").hide(200);
+    //     break;
+    //     case 'cred' :
+    //     alert("credito");
+    //     $(".vencimiento").show(200);
+    //     break;
+    //   }            
+    // });​
 
+
+    // $(".c_tipo").bind( "change", function(event, ui) {
+    //   alert('changed');
+    //   switch(){
+    //     case 'cont' :
+    //     alert("contado");
+    //     // $(".vencimiento").hide(200);
+    //     break;
+    //     case 'cred' :
+    //     alert("credito");
+    //     // $(".vencimiento").show(200);
+    //     break;
+    //   }            
+    // });​
+
+$("input[name=tipo]:radio").bind( "change", function(event, ui) {
+  // console.log('Lang: '+$(this).val());
+  // alert($(this).val());
+  if($(this).val()=='cred'){
+    $(".vencimiento").show(200);
+  }else{
+    $(".vencimiento").hide(200);
+  }
+    // $('#selected_lang').html('Language Selected: '+$(this).val());
   });
+
+});
 </script>
 <script type="text/javascript" charset="utf-8">
 
