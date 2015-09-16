@@ -7,28 +7,30 @@
     <script type="text/javascript" charset="utf-8">
 
    // file write stuff
-   function writeFile()
-   {
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);        
-}
 
-function gotFS(fileSystem) {
-    fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDir,failDir);
-    
-}
+   // Codigo para crear un archivo 
+    function writeFile()
+    {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);        
+    }
 
-function gotDir(dirEntry) {
-    dirEntry.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
-}
+    function gotFS(fileSystem) {
+        fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDir,failDir);
+        
+    }
 
-function gotFileEntry(fileEntry) {
-    fileEntry.createWriter(gotFileWriter, fail);
-}
+    function gotDir(dirEntry) {
+        dirEntry.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+    }
 
-function gotFileWriter(writer) {
-    console.log("success");
-    var element = document.getElementById('fileWritten');
-    element.innerHTML = "file written successfully";
+    function gotFileEntry(fileEntry) {
+        fileEntry.createWriter(gotFileWriter, fail);
+    }
+
+    function gotFileWriter(writer) {
+        console.log("success");
+        var element = document.getElementById('fileWritten');
+        element.innerHTML = "file written successfully";
     
         /*writer.onwriteend = function(evt) {
             console.log("contents of file now 'some sample text'");
@@ -60,8 +62,8 @@ function gotFileWriter(writer) {
     }
     
     function gotFSRead(fileSystem) {
-    fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDirRead,failDirRead);
-    
+        fileSystem.root.getDirectory("data_sitrans", {create: true, exclusive: false}, gotDirRead,failDirRead);
+
     }
 
     function gotDirRead(dirEntry) {
@@ -100,6 +102,8 @@ function gotFileWriter(writer) {
         };
         reader.readAsText(file);
     }
+
+
 
     function fail(error) {
         console.log("error code = " + error.code);
