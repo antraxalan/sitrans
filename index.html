@@ -35,6 +35,7 @@
 
 
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
+
     <title>SITRANS</title>
   </head>
   <body>
@@ -55,9 +56,9 @@
 
             <form class="ui">
 
-            
-                <img src="img/logo_s.jpg" alt="image" style="width:100%; margin-top: 10px; margin-bottom: 10px; ">
-                         
+
+              <img src="img/logo_s.jpg" alt="image" style="width:100%; margin-top: 10px; margin-bottom: 10px; ">
+
 
 
               <div class="ui-grid-solo" >
@@ -89,9 +90,16 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.mobile.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/exit.js"></script>
     
+
+
     <script type="text/javascript" charset="utf-8">
 
+ // jQuery(document).ready(function() {
+    // $(document).on("pagecreate","#home",function(){
+      $(document).on("pageinit",function(){
+      // alert("home");
     // Wait for device API libraries to load
     //
     $('.registrar').click(function() {
@@ -102,7 +110,7 @@
       // alert('Button has been clicked');
       window.location.href = "read_txt.html";
     });
-     $('.read').click(function() {
+    $('.read').click(function() {
       // alert('Button has been clicked');
       window.location.href = "r_w_txt_dir.html";
     });
@@ -120,25 +128,27 @@
       // window.location.href = "pruebas.html";
       window.location.href = "gen_txt.html";
     });
-    function onLoad() {
-      document.addEventListener("deviceready", onDeviceReady, false);
+  });
 
-    }
+    // function onLoad() {
+    //   document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Register the event listener
-        document.addEventListener("backbutton", onBackKeyDown, false);
-        
-      }
+    // }
 
-    // Handle the back button
-    //
-    function onBackKeyDown() {
-        // alert("Back");
-      }
+    // // device APIs are available
+    // //
+    // function onDeviceReady() {
+    //     // Register the event listener
+    //     document.addEventListener("backbutton", onBackKeyDown, false);
 
-    </script>
-  </body>
-  </html>
+    //   }
+
+    // // Handle the back button
+    // //
+    // function onBackKeyDown() {
+    //     // alert("Back");
+    //   }
+
+  </script>
+</body>
+</html>

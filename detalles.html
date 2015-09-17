@@ -51,7 +51,7 @@
       <div data-role="page" id="home" class="ui-page-theme-a">
         <header data-role="header" data-position="fixed">
           <h1>CBN</h1>
-          <a href="index.html" data-icon="home" class="ui-btn-right">Inicio</a>
+          <button data-icon="home" class="ui-btn-right inicio">Inicio</button>
         </header> 
 
         <div data-role="content">
@@ -384,42 +384,43 @@
           <a href="#venta" data-role="button">Detalles</a>
         </div>
 
-<ul data-role="listview" data-inset="true">
-        <li style="display: none-;">
-          <a href="#">
-            <!-- <img src="img/cart.png"> -->
-            <h2>Cobranza</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
-        </li>
-        <li style="display: none-;">
-          <a href="#">
-            <!-- <img src="img/cart.png"> -->
-            <h2>Envases</h2>
-            <p> El usuario <div id="show_cli"></div>  </p>
-           <!--  <div class="ui-grid-b">
+        <ul data-role="listview" data-inset="true">
+          <li class="cobranza_btn" style="display: none-;">
+            <a href="#cobranza">
+              <!-- <img src="img/cart.png"> -->
+              <h2 class="deuda">El cliente tiene deuda económica </h2>
+              <p> Ir a Cobranza </p>
+              <!-- <div class="ui-grid-b">
+                <div class="ui-block-a"><p>6 cajas</p></div>
+                <div class="ui-block-b"><p>2 unidades</p></div>
+                <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+              </div> -->
+            </a>
+            <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
+          </li>
+          <li class="deuda_btn" style="display: none-;">
+            <a href="#deuda">
+              <!-- <img src="img/cart.png"> -->
+              <h2 class="deuda">El cliente tiene deuda de envases</h2>
+              <!-- <p> Ir a Deuda Envases </p> -->
+           <div class="ui-grid-b">
               <div class="ui-block-a"><p>  </p></div>
               <div class="ui-block-b"><p>  </p></div>
-              <div class="ui-block-c price"><p><strong>  </strong></p></div>
-            </div> -->
+              <div class="ui-block-c"><p>Ir a Deuda Envases</p></div>
+            </div>
           </a>
           <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
         </li>
       </ul>
 
-      </form>
-    </div>
+    </form>
+  </div>
 
 
-  </div><!-- /content -->
-  <footer data-role="footer" data-position="fixed">
-    <h3>Copyright &copy; 2015</h3>
-  </footer>
+</div><!-- /content -->
+<footer data-role="footer" data-position="fixed">
+  <h3>Copyright &copy; 2015</h3>
+</footer>
 </div><!-- /Page Home -->
 
 
@@ -446,7 +447,7 @@
         <li><a href="#deuda">DEUDA ENVASES</a></li>
       </ul>
     </nav>
-    <br></br>
+    <br><br>
     <!-- agregar -->
     <div class="articulo">
 
@@ -594,10 +595,6 @@
               <option value="595">595 PILSENER BARRIL 50 litros               </option>
               <option value="596">596 TROP. EXTRA BARRIL 50 litros EXP. LPZ   </option>
               <option value="597">597 BARRIL BOCK 50 LTR.                     </option>
-
-
-
-
             </select>
           </div>
           <div data-role="fieldcontain" class="ui-field-contain ui-bar ui-bar-a ui-corner-all">
@@ -641,224 +638,220 @@
           </div>
 
 
-              <!-- <div data-role="fieldcontain" class="ui-field-contain">
-                <fieldset data-role="controlgroup" data-type="horizontal">
-                  <legend>Tipo:</legend>
-                  <label for="cont">Contado</label>
-                  <input type="radio" name="tipo" id="cont" checked>
-                  <label for="cred">Credito</label>
-                  <input type="radio" name="tipo" id="cred">
-                </fieldset>
-              </div>
-              <div data-role="fieldcontain" class="ui-field-contain">               
-                <label for="date">Fecha Vto:</label>
-                <input name="mydate" id="fecha2" type="date" data-role="datebox" data-options='{"mode": "datebox", "useNewStyle":true}'/>
-              </div>     -->
-              
-              <div class="ui-field-contain">
-                <button type="button" class="guardar_venta" data-icon="shop">Guardar</button>
-              </div>
 
 
-
-            </form>
+          <div class="ui-field-contain">
+            <button type="button" class="guardar_venta" data-icon="shop">Guardar</button>
           </div>
 
-        </div>
-        <!-- Finaliza agregar -->
-        <div class="ui-grid-b">
-         <div class="ui-block-a"> </div>
-         <div class="ui-block-b"><img src="img/cart.png" height="100" width="100"/></div>
-         <div class="ui-block-c"><button type="button" class="show big_button" data-icon="plus">Agregar</button></div>
-       </div>
-
-       <ul data-role="listview" data-split-icon="edit" data-inset="true">
-        <li>
-          <a href="#">
-            <img src="img/cart.png">
-            <h2>DUCAL 300 bot ow</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/cart.png">
-            <h2>175 IMPERIAL 1000</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/cart.png">
-            <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/cart.png">
-            <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/cart.png">
-            <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
-            <div class="ui-grid-b">
-              <div class="ui-block-a"><p>6 cajas</p></div>
-              <div class="ui-block-b"><p>2 unidades</p></div>
-              <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-            </div>
-          </a>
-          <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-        </li>
-      </ul>
 
 
-
-
-
-
-
-
-    </div>
-    <footer data-role="footer" data-position="fixed">
-      <h3>Copyright &copy; 2015</h3>
-    </footer>
-  </div>  
-
-
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-  <div data-role="page" id="cobranza">
-    <header data-role="header" data-position="fixed"> 
-      <h1>CBN</h1>
-    </header> 
-
-    <div data-role="content">
-      <nav data-role="navbar">
-        <ul>
-          <li><a href="#venta">VENTA</a></li>
-          <li><a href="#cobranza" class="ui-btn-active">COBRANZA</a></li>
-          <li><a href="#deuda">DEUDA ENVASES</a></li>
-        </ul>
-      </nav>
-      Cobranzas
-
-
-
-
-
-
-
-    </div>
-    <footer data-role="footer" data-position="fixed">
-      <h3>Copyright &copy; 2015</h3>
-    </footer>
-  </div>
-
-
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-  <div data-role="page" id="deuda">
-    <header data-role="header" data-position="fixed">
-      <h1>CBN</h1>
-    </header> 
-
-    <div data-role="content">
-      <nav data-role="navbar">
-        <ul>
-          <li><a href="#venta">VENTA</a></li>
-          <li><a href="#cobranza">COBRANZA</a></li>
-          <li><a href="#deuda" class="ui-btn-active">DEUDA ENVASES</a></li>
-        </ul>
-      </nav>
-      <div class="map">
-
+        </form>
       </div>
-      Deudas
-
-
-
-
-
-
-
-
-
 
     </div>
-    <footer data-role="footer" data-position="fixed">
-      <h3>Copyright &copy; 2015</h3>
-    </footer>
+    <!-- Finaliza agregar -->
+    <div class="ui-grid-b">
+     <div class="ui-block-a"> </div>
+     <div class="ui-block-b"><img src="img/cart.png" height="100" width="100"/></div>
+     <div class="ui-block-c"><button type="button" class="show big_button" data-icon="plus">Agregar</button></div>
+   </div>
+
+   <ul data-role="listview" data-split-icon="edit" data-inset="true">
+    <li>
+      <a href="#">
+        <img src="img/cart.png">
+        <h2>DUCAL 300 bot ow</h2>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><p>6 cajas</p></div>
+          <div class="ui-block-b"><p>2 unidades</p></div>
+          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+        </div>
+      </a>
+      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="img/cart.png">
+        <h2>175 IMPERIAL 1000</h2>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><p>6 cajas</p></div>
+          <div class="ui-block-b"><p>2 unidades</p></div>
+          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+        </div>
+      </a>
+      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="img/cart.png">
+        <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><p>6 cajas</p></div>
+          <div class="ui-block-b"><p>2 unidades</p></div>
+          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+        </div>
+      </a>
+      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="img/cart.png">
+        <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><p>6 cajas</p></div>
+          <div class="ui-block-b"><p>2 unidades</p></div>
+          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+        </div>
+      </a>
+      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="img/cart.png">
+        <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><p>6 cajas</p></div>
+          <div class="ui-block-b"><p>2 unidades</p></div>
+          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+        </div>
+      </a>
+      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+  </ul>
+
+
+
+
+
+
+
+
+</div>
+<footer data-role="footer" data-position="fixed">
+  <h3>Copyright &copy; 2015</h3>
+</footer>
+</div>  
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<div data-role="page" id="cobranza">
+  <header data-role="header" data-position="fixed"> 
+    <h1>CBN</h1>
+  </header> 
+
+  <div data-role="content">
+    <nav data-role="navbar">
+      <ul>
+        <li><a href="#venta">VENTA</a></li>
+        <li><a href="#cobranza" class="ui-btn-active">COBRANZA</a></li>
+        <li><a href="#deuda">DEUDA ENVASES</a></li>
+      </ul>
+    </nav>
+    Cobranzas
+
+
+
+
+
+
+
   </div>
+  <footer data-role="footer" data-position="fixed">
+    <h3>Copyright &copy; 2015</h3>
+  </footer>
+</div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<div data-role="page" id="deuda">
+  <header data-role="header" data-position="fixed">
+    <h1>CBN</h1>
+  </header> 
+
+  <div data-role="content">
+    <nav data-role="navbar">
+      <ul>
+        <li><a href="#venta">VENTA</a></li>
+        <li><a href="#cobranza">COBRANZA</a></li>
+        <li><a href="#deuda" class="ui-btn-active">DEUDA ENVASES</a></li>
+      </ul>
+    </nav>
+    <div class="map">
+
+    </div>
+    Deudas
+        <button class="ui-btn-active prueba1">DEUDA ENVASES</button></li>
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <footer data-role="footer" data-position="fixed">
+    <h3>Copyright &copy; 2015</h3>
+  </footer>
+</div>
 
 </div>
 
-<div class="ui-loader-background"> </div>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script>
-  jQuery(document).ready(function() {
+  // jQuery(document).ready(function() {
     // $(document).on("pagecreate","#home",function(){
-    // $(document).on("pagecreate",function(){
+      $(document).on("pageinit",function(){
 
 
-      var d = new Date();
+        var d = new Date();
 
-      var month = d.getMonth()+1;
-      var day = d.getDate();
-      var output =((''+day).length<2 ? '0' : '') + day + '/' +
-      ((''+month).length<2 ? '0' : '') + month + '/' +    d.getFullYear() ;
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+        var output =((''+day).length<2 ? '0' : '') + day + '/' +
+        ((''+month).length<2 ? '0' : '') + month + '/' +    d.getFullYear() ;
 
-      $("#fecha").val(output);
+        $("#fecha").val(output);
 
-      $(".articulo").hide();
-      $(".vencimiento").hide();
+        $(".articulo").hide();
+        $(".vencimiento").hide();
 
-      $('.show').click(function() {
-       $(".articulo").show(300);
-     });
+        $('.inicio').click(function() {
+         window.location.href = "index.html";
+       });
 
-      $('.guardar_venta').click(function() {
-       $(".articulo").hide(300);
-     });
+        $('.show').click(function() {
+         $(".articulo").show(300);
+       });
+
+        $('.guardar_venta').click(function() {
+         $(".articulo").hide(300);
+       });  
+         $('.prueba1').click(function() {
+         window.location.href = "detalles.html";
+       });
 
     // $('input[type=radio][name=tipo]').on('change', function(){
     //   switch($(this).val()){
