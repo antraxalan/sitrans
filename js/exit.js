@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", deviceisready, false);
 
 function deviceisready(){
-    alert("Device Ready is called");
+    // alert("Device Ready is called");
     document.addEventListener("backbutton", function(e){
         if ( $('.paginaprincipal').attr('id') == 'mainpage') {
             //window.location = "#exitDialog";
@@ -14,14 +14,14 @@ function deviceisready(){
 
 function exitAppPopup() {
     navigator.notification.confirm(
-        "Do you really want to close this app?", 
+        "Desea cerrar la aplicación?", 
         function(buttonIndex){
             ConfirmExit(buttonIndex);
         }, 
-        "Confirmation", 
-        "Yes,No"
+        "Confirmación", 
+        "Si,No"
     ); 
-    alert("Outside Notification"); 
+    // alert("Outside Notification"); 
     //return false;
 };
 
