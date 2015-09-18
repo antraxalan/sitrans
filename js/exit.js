@@ -3,7 +3,7 @@ document.addEventListener("deviceready", deviceisready, false);
 function deviceisready(){
     alert("Device Ready is called");
     document.addEventListener("backbutton", function(e){
-        if ( $('.ui-page-active').attr('id') == 'mainpage') {
+        if ( $('.paginaprincipal').attr('id') == 'mainpage') {
             //window.location = "#exitDialog";
             exitAppPopup();
         }else{
