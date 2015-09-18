@@ -2,14 +2,14 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-    console.log('Device Ready');
-     //Se ejecuta al cargar cualquier pagina del directorio
-     $.mobile.loading( 'hide', {
-        text: 'foo',
-        textVisible: true,
-        theme: 'z',
-        html: ""
-    });
+    // console.log('Device Ready');
+    //  //Se ejecuta al cargar cualquier pagina del directorio
+    //  $.mobile.loading( 'show', {
+    //     text: 'foo',
+    //     textVisible: true,
+    //     theme: 'z',
+    //     html: "sadasdasd"
+    // });
      
  }
 
