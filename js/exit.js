@@ -26,7 +26,7 @@ function exitAppPopup() {
 };
 
 function ConfirmExit(stat){
-    alert("Inside ConfirmExit");
+    // alert("Inside ConfirmExit");
     if(stat == "1"){
         navigator.app.exitApp();
     }else{
