@@ -42,6 +42,11 @@
     <!-- <script src="js/loader.js"></script> -->
 
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /> -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/exit.js"></script>
     <title>SITRANS</title>
   </head>
   <body>
@@ -385,7 +390,7 @@
         </div>
 
         <ul data-role="listview" data-inset="true">
-          <li class="cobranza_btn" style="display: none-;">
+          <li class="cobranza_btn" style="display: none---;">
             <a href="#cobranza">
               <!-- <img src="img/cart.png"> -->
               <h2 class="deuda">El cliente tiene deuda económica </h2>
@@ -402,7 +407,7 @@
             </a>
             <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
           </li>
-          <li class="deuda_btn" style="display: none-;">
+          <li class="deuda_btn" style="display: none---;">
             <a href="#deuda">
               <!-- <img src="img/cart.png"> -->
               <h2 class="deuda">El cliente tiene deuda de envases</h2>
@@ -453,6 +458,7 @@
     </nav>
     <br><br>
     <!-- agregar -->
+    <h4 class="mensaje" align="center"></h4>
     <div class="articulo">
 
       <div class="ui-content" role="main">
@@ -660,82 +666,85 @@
 
     </div>
     <!-- Finaliza agregar -->
-    <br>
+
     <div class="ui-grid-b">
      <div class="ui-block-a"> </div>
      <div class="ui-block-b"><img src="img/cart.png" height="100" width="100"/></div>
      <div class="ui-block-c"><button type="button" class="show big_button" data-icon="plus">Agregar</button></div>
    </div>
+   <div class="lista_carrito">
+     <ul data-role="listview" data-split-icon="edit" data-inset="true">
+      <li>
+        <a href="#">
+          <img src="img/cart.png">
+          <h2>DUCAL 300 bot ow</h2>
+          <div class="ui-grid-b">
+            <div class="ui-block-a"><p>6 cajas</p></div>
+            <div class="ui-block-b"><p>2 unidades</p></div>
+            <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+          </div>
+        </a>
+        <a href="#editar_venta" class="editar_venta_class" data-rel="popup" codigo-venta="1" data-transition="flow">Purchase album</a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/cart.png">
+          <h2>175 IMPERIAL 1000</h2>
+          <div class="ui-grid-b">
+            <div class="ui-block-a"><p>6 cajas</p></div>
+            <div class="ui-block-b"><p>2 unidades</p></div>
+            <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+          </div>
+        </a>
+        <a href="#editar_venta" class="editar_venta_class" data-rel="popup" codigo-venta="2" data-transition="flow">Purchase album</a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/cart.png">
+          <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
+          <div class="ui-grid-b">
+            <div class="ui-block-a"><p>6 cajas</p></div>
+            <div class="ui-block-b"><p>2 unidades</p></div>
+            <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+          </div>
+        </a>
+        <a href="#editar_venta" class="editar_venta_class" data-rel="popup" codigo-venta="3" data-transition="flow">Purchase album</a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/cart.png">
+          <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
+          <div class="ui-grid-b">
+            <div class="ui-block-a"><p>6 cajas</p></div>
+            <div class="ui-block-b"><p>2 unidades</p></div>
+            <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+          </div>
+        </a>
+        <a href="#editar_venta" class="editar_venta_class" data-rel="popup" codigo-venta="4" data-transition="flow">Purchase album</a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/cart.png">
+          <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
+          <div class="ui-grid-b">
+            <div class="ui-block-a"><p>6 cajas</p></div>
+            <div class="ui-block-b"><p>2 unidades</p></div>
+            <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
+          </div>
+        </a>
+        <a href="#editar_venta" class="editar_venta_class"  data-rel="popup" codigo-venta="12" data-transition="flow">Purchase album</a>
+      </li>
+    </ul>
+  </div>
+  <!-- .lista_carrito -->
 
-   <ul data-role="listview" data-split-icon="edit" data-inset="true">
-    <li>
-      <a href="#">
-        <img src="img/cart.png">
-        <h2>DUCAL 300 bot ow</h2>
-        <div class="ui-grid-b">
-          <div class="ui-block-a"><p>6 cajas</p></div>
-          <div class="ui-block-b"><p>2 unidades</p></div>
-          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-        </div>
-      </a>
-      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="img/cart.png">
-        <h2>175 IMPERIAL 1000</h2>
-        <div class="ui-grid-b">
-          <div class="ui-block-a"><p>6 cajas</p></div>
-          <div class="ui-block-b"><p>2 unidades</p></div>
-          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-        </div>
-      </a>
-      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="img/cart.png">
-        <h2>203 TAQUIÑA ICE 300 CC X 1</h2>
-        <div class="ui-grid-b">
-          <div class="ui-block-a"><p>6 cajas</p></div>
-          <div class="ui-block-b"><p>2 unidades</p></div>
-          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-        </div>
-      </a>
-      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="img/cart.png">
-        <h2>378 MALTIN 330 CC. SABOR ORIGINAL</h2>
-        <div class="ui-grid-b">
-          <div class="ui-block-a"><p>6 cajas</p></div>
-          <div class="ui-block-b"><p>2 unidades</p></div>
-          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-        </div>
-      </a>
-      <a href="#editar_venta" class="editar_venta_class" data-rel="popup" data-transition="flow">Purchase album</a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="img/cart.png">
-        <h2>511 PILSENER TWIST OFF 300 O.W. PROMOCION</h2>
-        <div class="ui-grid-b">
-          <div class="ui-block-a"><p>6 cajas</p></div>
-          <div class="ui-block-b"><p>2 unidades</p></div>
-          <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
-        </div>
-      </a>
-      <a href="#editar_venta" class="editar_venta_class"  data-rel="popup" codigo-producto="234" data-transition="flow">Purchase album</a>
-    </li>
-  </ul>
-  
   <div data-role="popup" id="editar_venta" data-overlay-theme="a" data-theme="a"  style="max-width:400px;">
     <div data-role="header" data-theme="a">
-    <h1>Producto</h1>
+      <h1>Producto</h1>
     </div>
     <div role="main" class="ui-content">
       <p id="titulo_popup">...</p>
+      <input class="id_venta" type="hidden---" value="9999">
       <p>__________________________________________</p>
       <div class="ui-grid-a">
         <div class="ui-block-a">
@@ -747,6 +756,12 @@
     </div>
   </div>
 
+  <div data-role="popup" id="alerta_eliminado_venta">
+    <h3>Registro eliminado.</h3>
+  </div>
+  <div data-role="popup" id="alerta_guardado_venta">
+    <h3>Registro guardado.</h3>
+  </div>
 
 
 
@@ -842,11 +857,7 @@
 </div>
 
 
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/exit.js"></script>
+
 <script>
   // jQuery(document).ready(function() {
     // $(document).on("pagecreate","#home",function(){
@@ -861,7 +872,7 @@
         ((''+month).length<2 ? '0' : '') + month + '/' +    d.getFullYear() ;
 
         $("#fecha").val(output);
-
+        $('.mensaje').hide();
         $(".articulo").hide();
         $(".vencimiento").hide();
 
@@ -874,7 +885,13 @@
        });
 
         $('.guardar_venta').click(function() {
+         
+
+
          $(".articulo").hide(300);
+         $('.mensaje').html("<div style='color:green;'>GUARDADO</div>");
+         $('.mensaje').show(300);
+         setTimeout(function(){ $('.mensaje').hide(300); $('.mensaje').html(""); }, 3000);
        });  
 
         $('.cancelar_venta').click(function() {
@@ -882,18 +899,27 @@
        }); 
         $(".editar_venta_class").on('click', function(event) {
           // $(this).attr('codigo-producto');
+          $(".articulo").hide();
           var text = $(this).parent().find('h2').text()
           $('#titulo_popup').html(text);
+          // alert($(this).attr('codigo-venta'));
+          $(".id_venta").val($(this).attr('codigo-venta'));
+
+          // alert("hola");
+          // $( "#alerta_eliminado_venta" ).popup( "close" );
+          // $(".id_venta").val('0');
         });
         $('.eliminar_popup').click(function() {
-          $('#titulo_popup').html($(this).val());
+          // $('#titulo_popup').html($(this).val());
+          // alert("asd");
+          
+          $('.mensaje').html("<div style='color:red;'>ELIMINADO</div>");
+          $('.mensaje').show(300);
+          setTimeout(function(){ $('.mensaje').hide(300); $('.mensaje').html(""); }, 3000);
 
-
-
-          $(".articulo").hide(300);
         }); 
         $('.editar_popup').click(function() {
-         $(".articulo").hide(300);
+         $(".articulo").show(300);
        }); 
 
 

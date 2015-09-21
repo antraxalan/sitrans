@@ -1,11 +1,17 @@
 document.addEventListener("deviceready", deviceisready, false);
+$.mobile.loading( 'show', {
+        text: 'foo',
+        textVisible: true,
+        theme: 'a',
+        html: "sadasdasd"
+    });
 
 function deviceisready(){
     // alert("Device Ready is called");
 
         console.log('Device Ready');
      //Se ejecuta al cargar cualquier pagina del directorio
-     $.mobile.loading( 'show', {
+     $.mobile.loading( 'hide', {
         text: 'foo',
         textVisible: true,
         theme: 'a',
