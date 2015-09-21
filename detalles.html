@@ -389,7 +389,11 @@
             <a href="#cobranza">
               <!-- <img src="img/cart.png"> -->
               <h2 class="deuda">El cliente tiene deuda económica </h2>
-              <p style="float:left;"> Ir a Cobranza </p>
+              <div class="ui-grid-b">
+                <div class="ui-block-a"><p>  </p></div>
+                <div class="ui-block-b"><p>  </p></div>
+                <div class="ui-block-c"><p>Ir a Cobranza</p></div>
+              </div>
               <!-- <div class="ui-grid-b">
                 <div class="ui-block-a"><p>6 cajas</p></div>
                 <div class="ui-block-b"><p>2 unidades</p></div>
@@ -403,24 +407,24 @@
               <!-- <img src="img/cart.png"> -->
               <h2 class="deuda">El cliente tiene deuda de envases</h2>
               <!-- <p> Ir a Deuda Envases </p> -->
-           <div class="ui-grid-b">
-              <div class="ui-block-a"><p>  </p></div>
-              <div class="ui-block-b"><p>  </p></div>
-              <div class="ui-block-c"><p>Ir a Deuda Envases</p></div>
-            </div>
-          </a>
-          <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
-        </li>
-      </ul>
+              <div class="ui-grid-b">
+                <div class="ui-block-a"><p>  </p></div>
+                <div class="ui-block-b"><p>  </p></div>
+                <div class="ui-block-c"><p>Ir a Deuda Envases</p></div>
+              </div>
+            </a>
+            <!-- <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> -->
+          </li>
+        </ul>
 
-    </form>
-  </div>
+      </form>
+    </div>
 
 
-</div><!-- /content -->
-<footer data-role="footer" data-position="fixed">
-  <h3>Copyright &copy; 2015</h3>
-</footer>
+  </div><!-- /content -->
+  <footer data-role="footer" data-position="fixed">
+    <h3>Copyright &copy; 2015</h3>
+  </footer>
 </div><!-- /Page Home -->
 
 
@@ -641,7 +645,12 @@
 
 
           <div class="ui-field-contain">
-            <button type="button" class="guardar_venta" data-icon="shop">Guardar</button>
+            <br>
+            <button type="button" class="ui-btn ui-icon-minus ui-btn-icon-right ui-shadow ui-btn-a ui-corner-all cancelar cancelar_venta">Cancelar</button>
+            <br>
+            <button type="button" class="ui-btn ui-icon-shop ui-btn-icon-right ui-shadow ui-btn-b ui-corner-all guardar_venta">Guardar</button>
+            <br>
+            <hr>
           </div>
 
 
@@ -651,6 +660,7 @@
 
     </div>
     <!-- Finaliza agregar -->
+    <br>
     <div class="ui-grid-b">
      <div class="ui-block-a"> </div>
      <div class="ui-block-b"><img src="img/cart.png" height="100" width="100"/></div>
@@ -668,7 +678,7 @@
           <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
         </div>
       </a>
-      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
     </li>
     <li>
       <a href="#">
@@ -680,7 +690,7 @@
           <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
         </div>
       </a>
-      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
     </li>
     <li>
       <a href="#">
@@ -692,7 +702,7 @@
           <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
         </div>
       </a>
-      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+      <a href="#editar_venta" class="editar_venta_class" data-rel="popup"  data-transition="flow">Purchase album</a>
     </li>
     <li>
       <a href="#">
@@ -704,7 +714,7 @@
           <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
         </div>
       </a>
-      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+      <a href="#editar_venta" class="editar_venta_class" data-rel="popup" data-transition="flow">Purchase album</a>
     </li>
     <li>
       <a href="#">
@@ -716,10 +726,26 @@
           <div class="ui-block-c price"><p><strong>50.5 Bs</strong></p></div>
         </div>
       </a>
-      <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+      <a href="#editar_venta" class="editar_venta_class"  data-rel="popup" codigo-producto="234" data-transition="flow">Purchase album</a>
     </li>
   </ul>
+  
+  <div data-role="popup" id="editar_venta" data-overlay-theme="a" data-theme="a"  style="max-width:400px;">
+    <div data-role="header" data-theme="a">
+    <h1>Producto</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <p id="titulo_popup">...</p>
+      <p>__________________________________________</p>
+      <div class="ui-grid-a">
+        <div class="ui-block-a">
+          <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-shadow  ui-btn-a eliminar_popup" data-rel="back" data-transition="flow">Eliminar</a>
+        </div>
+        <div class="ui-block-b"><a href="#" class="ui-btn ui-icon-edit ui-btn-icon-right ui-corner-all ui-shadow  ui-btn-b editar_popup" data-rel="back">Editar</a></div>
 
+      </div>
+    </div>
+  </div>
 
 
 
@@ -796,7 +822,7 @@
 
     </div>
     Deudas
-        <button class="ui-btn-active prueba1">DEUDA ENVASES</button></li>
+    <button class="ui-btn-active prueba1">DEUDA ENVASES</button></li>
 
 
 
@@ -850,7 +876,28 @@
         $('.guardar_venta').click(function() {
          $(".articulo").hide(300);
        });  
-         $('.prueba1').click(function() {
+
+        $('.cancelar_venta').click(function() {
+         $(".articulo").hide(300);
+       }); 
+        $(".editar_venta_class").on('click', function(event) {
+          // $(this).attr('codigo-producto');
+          var text = $(this).parent().find('h2').text()
+          $('#titulo_popup').html(text);
+        });
+        $('.eliminar_popup').click(function() {
+          $('#titulo_popup').html($(this).val());
+
+
+
+          $(".articulo").hide(300);
+        }); 
+        $('.editar_popup').click(function() {
+         $(".articulo").hide(300);
+       }); 
+
+
+        $('.prueba1').click(function() {
          window.location.href = "detalles.html";
        });
 
@@ -890,33 +937,11 @@ $("input[name=tipo]:radio").bind( "change", function(event, ui) {
   }else{
     $(".vencimiento").hide(200);
   }
-    // $('#selected_lang').html('Language Selected: '+$(this).val());
+    //  $('#selected_lang').html('Language Selected: '+$(this).val());
   });
 
 });
 </script>
-<script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    function onLoad() {
-      document.addEventListener("deviceready", onDeviceReady, false);
-
-    }
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Register the event listener
-        document.addEventListener("backbutton", onBackKeyDown, false);
-      }
-
-    // Handle the back button
-    //
-    function onBackKeyDown() {
-        // alert("Back");
-      }
-
-    </script>
-  </body>
-  </html>
+</body>
+</html>
