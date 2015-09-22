@@ -82,7 +82,7 @@
             </form>
           </div>
           <input class="var1" value="aruquipa" placeholder="var1"/>    
-          <input class="direccion" placeholder="direccion"/>
+          <input class="direccion" value="192.168.0.104" placeholder="direccion"/>
 
         </div><!-- /content -->
         <footer data-role="footer" data-position="fixed">
@@ -120,6 +120,7 @@
     });
     $('.finalizar').click(function() {
       var var1= $(".var1").val();
+      var direccion= $(".direccion").val();
       $.mobile.loading("show", {
         theme: 'a'
       });
@@ -127,7 +128,7 @@
       $.ajax({
         type: 'POST',
         dataType: 'json',
-        url: "http://192.168.0.104/sitrans_server/sitrans.php",
+        url: "http://"+direccion+"/sitrans_server/sitrans.php",
         data: "var1=" + var1,
         success: function (resp) {
           $.mobile.loading("hide");
