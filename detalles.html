@@ -966,6 +966,35 @@ $("input[name=tipo]:radio").bind( "change", function(event, ui) {
     //  $('#selected_lang').html('Language Selected: '+$(this).val());
   });
 
+$("#cliente").bind( "change", function(event, ui) {
+  // console.log('Lang: '+$(this).val());
+  alert($(this).val());
+  
+    //  $('#selected_lang').html('Language Selected: '+$(this).val());
+  });
+
+function goSearch() {
+  var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
+  db.transaction(searchQueryDB, errorCB);
+}
+function searchQueryDB(tx) {
+  tx.executeSql("SELECT * FROM DEMO where name like ('%"+ document.getElementById("txtName").value + "%')",
+    [], querySuccess, errorCB);
+}
+function querySuccess(tx, results) {
+  var tblText='<table id="t01"><tr><th>ID</th> <th>Name</th> <th>Number</th></tr>';
+  var len = results.rows.length;
+  for (var i = 0; i < len; i++) {
+    var tmpArgs=results.rows.item(i).id + ",'" + results.rows.item(i).name
+    + "','" + results.rows.item(i).number+"'";
+    tblText +='<tr onclick="goPopup('+ tmpArgs + ');"><td>' + results.rows.item(i).id +'</td><td>'
+    + results.rows.item(i).name +'</td><td>' + results.rows.item(i).number +'</td></tr>';
+  }
+  tblText +="</table>";
+  document.getElementById("tblDiv").innerHTML =tblText;
+}
+
+
 });
 </script>
 

@@ -9,6 +9,14 @@
     <script type="text/javascript">
 
 
+        // var len = results.rows.length;
+        // if(len>0)
+        // {
+        //     alert(results.rows.item(0)['ColumnName']);
+        // }
+
+
+
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -89,10 +97,10 @@
         }
 
         function goDelete() {
-         var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
-         db.transaction(deleteRow, errorCB);
-         document.getElementById('qrpopup').style.display='none';
-     }
+           var db = window.openDatabase("strans_db", "1.0", "Sitrans DB", 500000);
+           db.transaction(deleteRow, errorCB);
+           document.getElementById('qrpopup').style.display='none';
+       }
 
         //Show the popup after tapping a row in table
         //
@@ -118,9 +126,9 @@
     </script>
 </head>
 <body>
- <h1>My first App</h1>
- <p>Open Database</p>
- <div id="qrpopup" > //The hidden div tag for implementing the popup
+   <h1>My first App</h1>
+   <p>Open Database</p>
+   <div id="qrpopup" > //The hidden div tag for implementing the popup
     <hr/>
     <input type="text" id="editNameBox"><br>
     <input type="text" id="editNumberBox"><br>
