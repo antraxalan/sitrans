@@ -81,7 +81,8 @@
               </div>
             </form>
           </div>
-
+          <input class="var1" value="aruquipa" placeholder="var1"/>    
+          <input class="direccion" placeholder="direccion"/>
 
         </div><!-- /content -->
         <footer data-role="footer" data-position="fixed">
@@ -104,26 +105,41 @@
       window.location.href = "detalles.html";
     });
     $('.iniciar').click(function() {
-      // alert('Button has been clicked');
-      window.location.href = "read_txt.html";
+
     });
     $('.read').click(function() {
       // alert('Button has been clicked');
       window.location.href = "r_w_txt_dir.html";
     });
     $('.info').click(function() {
-      // alert('Button has been clicked');
-      window.location.href = "pruebas.html";
+
     });
     $('.cargar').click(function() {
-      // alert('Button has been clicked');
-      // window.location.href = "pruebas.html";
-      window.location.href = "pruebas2.html";
+
+      window.location.href = "db.html";
     });
     $('.finalizar').click(function() {
-      // alert('Button has been clicked');
-      // window.location.href = "pruebas.html";
-      window.location.href = "gen_txt.html";
+      var var1= $(".var1").val();
+      $.mobile.loading("show", {
+        theme: 'a'
+      });
+
+      $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: "http://192.168.0.104/sitrans_server/sitrans.php",
+        data: "var1=" + var1,
+        success: function (resp) {
+          $.mobile.loading("hide");
+          alert(resp);
+        },
+        error: function (e) {
+          $.mobile.loading("hide");
+          alert("error");
+        }
+      });
+
+
     });
   });
 
